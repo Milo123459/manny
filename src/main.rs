@@ -1,3 +1,11 @@
-fn main() {
-    println!("Hello, world!");
+mod args;
+mod cli;
+mod macros;
+mod run;
+pub use anyhow::Context;
+pub use structopt::StructOpt;
+
+fn main() -> anyhow::Result<()> {
+	run::run(args::Arguments::from_args_safe()?)?;
+	Ok(())
 }
