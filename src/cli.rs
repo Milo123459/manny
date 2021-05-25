@@ -4,14 +4,14 @@ use colored::*;
 use std::io::Error;
 
 pub fn action(input: Vec<&str>) -> anyhow::Result<()> {
-	// this will sanitize the vec in a sense
-	// the input has \" \" around the value we want so we remove it
-	// we also filter out _ from the vec
+    // this is a vec sanitizer, focusing on removing and formatting things provided by a custom macro to get the match arms (/ keys) in a match statement
+	// the given vec has \" \" around the value we want so we remove that
+	// we also filter out _ from the given vec, to make sure it doesn't display any not-needed info
 	let actions = input
 		.into_iter()
 		.filter_map(|x| x.strip_prefix('"')?.strip_suffix('"'))
 		.collect::<Vec<_>>();
-	// log a nice message displaying all the actions
+	// log a nice message displaying all the actions / commands
 	println!(
 		"Actions available:\n{}",
 		actions.join(", ").underline().bold().blue()
