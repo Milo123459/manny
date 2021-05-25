@@ -13,7 +13,4 @@ This DB folder is a cloned version of the DB repo. You need to have git installe
 
 Manny's CLI / core (the repo you are on) is written in Rust. This allows the CLI to be ridiculously fast. 
 
-If you have any other questions, please create an issue! I'll try and help out ASAP. (Please don't make issues on the MannyDB repo, there isn't a point)
-## Generic
-
-A generic app means that the name of the app you added is already used, ie, an app with the name of `action` wouldn't work as there is an action command. To bypass this, simply type `manny manifest action` rather than `manny action`.
+If you have any other questions, please create an issue! I'll try and help out ASAP. (Please don't make issues on the MannyDB repo, there isn't a point).
