@@ -2,7 +2,7 @@
 A better, more sleek community based man page effort.
 
 Thanks for visiting! 
-<img alt="" src="https://badges.pufler.dev/visits/Milo123459/manny?style=flat-square&label=&color=fa74b2&logo=GitHub&logoColor=white&labelColor=373e4d"/>
+<img alt="" align="right" src="https://badges.pufler.dev/visits/Milo123459/manny?style=flat-square&label=&color=fa74b2&logo=GitHub&logoColor=white&labelColor=373e4d"/>
 
 ## How
 
