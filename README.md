@@ -1,6 +1,9 @@
 # manny
 A better, more sleek community based man page effort.
 
+Thanks for visiting! 
+<img alt="" src="https://badges.pufler.dev/visits/Milo123459/manny?style=flat-square&label=&color=fa74b2&logo=GitHub&logoColor=white&labelColor=373e4d"/>
+
 ## How
 
 Manny is an enfort to help get more info on apps you love via the CLI. There is a seperate repo, [MannyDB](https://github.com/Milo123459/mannydb) which is where your app information is stored. If you want to add your app to manny, or update it, you submit a PR there. On the repo you will find contribution guidelines. Make sure to follow them!
