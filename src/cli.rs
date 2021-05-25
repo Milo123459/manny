@@ -4,7 +4,7 @@ use colored::*;
 use std::io::Error;
 
 pub fn action(input: Vec<&str>) -> anyhow::Result<()> {
-    // this is a vec sanitizer, focusing on removing and formatting things provided by a custom macro to get the match arms (/ keys) in a match statement
+	// this is a vec sanitizer, focusing on removing and formatting things provided by a custom macro to get the match arms (/ keys) in a match statement
 	// the given vec has \" \" around the value we want so we remove that
 	// we also filter out _ from the given vec, to make sure it doesn't display any not-needed info
 	let actions = input
