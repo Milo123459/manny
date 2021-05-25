@@ -14,7 +14,7 @@ pub fn action(input: Vec<&str>) -> anyhow::Result<()> {
 	// log a nice message displaying all the actions
 	println!(
 		"Actions available:\n{}",
-		actions.join(", ").underline().bold()
+		actions.join(", ").underline().bold().blue()
 	);
 	Ok(())
 }
