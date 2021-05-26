@@ -1,4 +1,5 @@
 use crate::args;
+use crate::db;
 use crate::match_patterns;
 use colored::*;
 use std::io::Error;
@@ -19,11 +20,27 @@ pub fn action(input: Vec<&str>) -> anyhow::Result<()> {
 	Ok(())
 }
 
+pub fn update() -> anyhow::Result<()> {
+	let should_clone = db::should_clone()?;
+	if should_clone {
+		println!("Cloning DB..");
+		db::clone()?;
+		println!("Cloned");
+	} else {
+		println!("Updating DB..");
+		db::update()?;
+		println!("Updated");
+	}
+
+	Ok(())
+}
+
 pub fn match_cmds(args: args::Arguments) -> anyhow::Result<()> {
 	let cmd = &args.action;
 	match_patterns! { &*cmd.to_lowercase(), patterns,
 		"action" => action(patterns)?,
 		"actions" => action(patterns)?,
+		"update" => update()?,
 		_ => return Err(anyhow::Error::new(Error::new(
 			std::io::ErrorKind::InvalidInput,
 			"Invalid action. Try the command `action`",

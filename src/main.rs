@@ -1,5 +1,6 @@
 mod args;
 mod cli;
+mod db;
 mod macros;
 mod run;
 pub use anyhow::Context;
